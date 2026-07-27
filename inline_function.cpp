@@ -1,5 +1,4 @@
-#include <iostream>
-#include <cstdlib>
+#include "utils.h"
 
 inline size_t product(size_t a, size_t b) {
     return a * b;

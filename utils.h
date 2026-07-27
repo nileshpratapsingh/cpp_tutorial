@@ -9,6 +9,10 @@
 #include <sstream>
 #include <cstring>
 #include <iostream>
+#include <limits>    // Added
+#include <utility>   // Added for std::pair
 #include <boost/multiprecision/cpp_int.hpp>
+
+void print_array(int arr[], int size);
 
 #endif

@@ -1,6 +1,4 @@
-#include <iostream>
-#include <cstring>
-#include <cstdlib>
+#include "utils.h"
 
 char* sum(const char* a, const char* b) {
     char* result = new char[std::strlen(a) + std::strlen(b) + 1];

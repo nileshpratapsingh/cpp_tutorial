@@ -1,6 +1,4 @@
-#include <iostream>
-#include <cstdlib>
-#include <boost/multiprecision/cpp_int.hpp>
+#include "utils.h"
 
 using boost::multiprecision::cpp_int;
 

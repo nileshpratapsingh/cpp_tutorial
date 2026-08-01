@@ -2,14 +2,21 @@
 
 class Employee {
 public:
-  static int count;
+ /*
+  * Static Data Member does not change the value When the class object is created like other data members.
+  */
+  static int count; // default value is zero 0
   size_t id[100];
 
   void setData();
   void getData();
+  /*
+   * Static method can only access only other static method and static data member.
+   * They can only access by the class name,
+   */
   static void getCount();
 };
-
+// they can be accessed like this
 int Employee::count = 0;
 
 void Employee::setData() {
@@ -43,6 +50,8 @@ int main() {
   }
 
   a.getData();
+  // no need to create the object
+  // Can access them directly by there class name
   Employee::getCount();
 
   return EXIT_SUCCESS;

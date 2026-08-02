@@ -22,3 +22,12 @@ int randomInt(int max) {
 int randomInt(int min, int max) {
   return rand() % (max - min + 1) + min;
 }
+
+float randomFloat(float max) {
+    float value = static_cast<float>(rand()) / RAND_MAX * max;
+    return std::round(value * 100.0f) / 100.0f;
+}
+
+float randomFloat(float min, float max) {
+    return min + static_cast<float>(rand()) / RAND_MAX * (max - min);
+}

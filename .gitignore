@@ -58,3 +58,4 @@ Makefile.user
 *.workspace
 # Other generated files
 *.dSYM/
+*.s

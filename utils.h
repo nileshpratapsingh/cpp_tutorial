@@ -9,14 +9,16 @@
 
 #include <boost/multiprecision/cpp_int.hpp> // IWYU pragma: export
 #include <chrono>
-#include <cmath>    // IWYU pragma: export
-#include <cstddef>  // IWYU pragma: export
+#include <cmath>   // IWYU pragma: export
+#include <cstddef> // IWYU pragma: export
+#include <cstdint>
 #include <cstdlib>  // IWYU pragma: export
 #include <cstring>  // IWYU pragma: export
 #include <ctime>    // IWYU pragma: export
 #include <iostream> // IWYU pragma: export
 #include <limits>   // IWYU pragma: export
 #include <sstream>  // IWYU pragma: export
+#include <string>
 #include <thread>
 #include <utility>   // IWYU pragma: export
 #include <vector>    // IWYU pragma: export

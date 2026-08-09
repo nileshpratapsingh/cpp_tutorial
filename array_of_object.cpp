@@ -1,6 +1,4 @@
 #include "utils.h"
-#include <cstdlib>
-#include <iostream>
 
 class Employee {
   size_t id;

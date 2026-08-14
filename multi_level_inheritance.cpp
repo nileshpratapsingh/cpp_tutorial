@@ -70,18 +70,19 @@ void Result::display(void) {
 
 int main() {
 
-    Result r1;
+    Result *ptr = new Result;
 
-    r1.set_roll_number(458790);
-    r1.set_marks(65.34f, 78.34f);
+    ptr->set_roll_number(458790);
+    ptr->set_marks(65.34f, 78.34f);
 
-    r1.get_roll_number();
-    r1.get_marks();
+    ptr->get_roll_number();
+    ptr->get_marks();
 
-    r1.set_percentage();
-    r1.calculate_average();
+    ptr->set_percentage();
+    ptr->calculate_average();
 
-    r1.display();
+    ptr->display();
 
+    delete ptr;
     return EXIT_SUCCESS;
 }

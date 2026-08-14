@@ -39,20 +39,20 @@ void Employee::getData() {
 void Employee::getCount() { std::cout << "Total Employees: " << count << '\n'; }
 
 int main() {
-  Employee a;
+  Employee *a = new Employee;
 
   size_t n;
   std::cout << "How many employees? ";
   std::cin >> n;
 
   for (size_t i = 0; i < n; i++) {
-    a.setData();
+    a->setData();
   }
 
-  a.getData();
+  a->getData();
   // no need to create the object
   // Can access them directly by there class name
   Employee::getCount();
-
+  delete a;
   return EXIT_SUCCESS;
 }

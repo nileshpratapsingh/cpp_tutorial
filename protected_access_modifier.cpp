@@ -2,9 +2,9 @@
 
 class Base {
   /*
-  Protected member of the class can be inherited by the derived class in prote
-  and public visibility mode, But can't be accessed by the object that are
-  created by the derived class
+  Protected member of the class can be inherited by the derived class in protected
+  and public visibility mode, But can't be accessed by the object that are beign
+  created by the derived class.
 */
 protected:
   size_t a;
@@ -22,7 +22,7 @@ class Derived : protected Base {
 };
 
 int main() {
-  Derived d1;
-  std::cout << d1.b << std::endl;
+  Derived *d1 = new Derived;
+  std::cout << d1->b << std::endl;
   return EXIT_SUCCESS;
 }

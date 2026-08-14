@@ -1,15 +1,15 @@
 #include "utils.h"
 
 class Bank_Deposite {
-  double principle;
-  double interest_rate;
-  size_t years;
-  double return_value;
+  f64 principle;
+  f64 interest_rate;
+  u64 years;
+  f64 return_value;
 
 public:
   Bank_Deposite();
-  Bank_Deposite(size_t p, size_t y, size_t r);
-  Bank_Deposite(size_t p, size_t y, float r);
+  Bank_Deposite(u64 p, u64 y, u64 r);
+  Bank_Deposite(u64 p, u64 y, float r);
 
   void display() const;
 };
@@ -19,17 +19,17 @@ Bank_Deposite::Bank_Deposite()
     : principle(0), interest_rate(0.0), years(0), return_value(0.0) {}
 
 // Integer interest rate (e.g. 10%)
-Bank_Deposite::Bank_Deposite(size_t p, size_t y, size_t r)
+Bank_Deposite::Bank_Deposite(u64 p, u64 y, u64 r)
     : principle(p), interest_rate(r / 100.0), years(y), return_value(p) {
-  for (size_t i = 0; i < years; i++) {
+  for (u64 i = 0; i < years; i++) {
     return_value *= (1.0 + interest_rate);
   }
 }
 
 // Floating-point interest rate (e.g. 10.75%)
-Bank_Deposite::Bank_Deposite(size_t p, size_t y, float r)
+Bank_Deposite::Bank_Deposite(u64 p, u64 y, float r)
     : principle(p), interest_rate(r / 100.0), years(y), return_value(p) {
-  for (size_t i = 0; i < years; i++) {
+  for (u64 i = 0; i < years; i++) {
     return_value *= (1.0 + interest_rate);
   }
 }
@@ -42,14 +42,14 @@ void Bank_Deposite::display() const {
 }
 
 int main() {
-  initRandom();
+    utils::initRandom();
 
   while (true) {
-    size_t principal = randomInt(1000) + 1;
-    size_t years = randomInt(10) + 1;
+    u64 principal = utils::randomInt(1000) + 1;
+    u64 years = utils::randomInt(10) + 1;
 
-    size_t intRate = randomInt(20) + 1;   // 1% - 20%
-    float floatRate = randomFloat(20.0f); // 0.00% - 20.00%
+    u64 intRate = utils::randomInt(20) + 1;   // 1% - 20%
+    float floatRate = utils::randomFloat(20.0f); // 0.00% - 20.00%
 
     Bank_Deposite bd1(principal, years, intRate);
     Bank_Deposite bd2(principal, years, floatRate);

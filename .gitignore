@@ -59,3 +59,4 @@ Makefile.user
 # Other generated files
 *.dSYM/
 *.s
+*.txt

@@ -1,42 +1,38 @@
 #include "utils.h"
 
-std::pair<int,int> get_max_min(int nums[], int size){
-    int max = std::numeric_limits<int>::min();
-    int min = std::numeric_limits<int>::max();
-    for (int i = 0; i < size; i++)
-    {
-        if (nums[i] > max)
-        {
+std::pair<u64, u64> *get_max_min(u64 nums[], u64 size) {
+    u64 max = std::numeric_limits<u64>::min();
+    u64 min = std::numeric_limits<u64>::max();
+    for (u64 i = 0; i < size; i++) {
+        if (nums[i] > max) {
             max = nums[i];
         }
-        if (nums[i] < min)
-        {
+        if (nums[i] < min) {
             min = nums[i];
         }
     }
 
-    return {max, min};
+    return new std::pair<u64, u64>{max, min};
 }
 
-int main(){
+int main() {
+    utils::initRandom();
+    u64 size = utils::randomInt(1000);
 
-    int size;
-    std::cout << "Enter size: ";
-    std::cin >> size;
+    u64 arr[1000];
 
-    int arr[100];
-
-    for (int i = 0; i < size; i++)
-    {
-        std::cout << "Enter element " << i + 1 << ": ";
-        std::cin >> arr[i];
+    for (u64 i = 0; i < size; i++) {
+        arr[i] = utils::randomInt(5762);
     }
 
-    print_array(arr, size);
+    system("cls");
+    utils::print_array(arr, size, true);
 
-    std::pair<int, int> result = get_max_min(arr, size);
-    std::cout << "The max value in array is: " << result.first << std::endl;
-    std::cout << "The min value in array is: " << result.second << std::endl;
+    std::pair<u64, u64> *result = get_max_min(arr, size);
 
+    std::cout << "The max value in array is: " << result->first << std::endl;
+    std::cout << "The min value in array is: " << result->second << std::endl;
+
+    delete result;
     return 0;
 }

@@ -1,5 +1,7 @@
 #include "utils.h"
 
+// Executed in cpu registers for fast computation.
+// Note: only declare them for the small computation.
 inline size_t product(size_t a, size_t b) {
     return a * b;
 }

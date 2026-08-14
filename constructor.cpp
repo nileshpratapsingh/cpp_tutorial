@@ -3,7 +3,7 @@ class Complex {
   size_t a, b;
 
 public:
-  // Complexonstructor is declared as same as the name of the class
+  // Constructor is declared as same as the name of the class
   Complex();
 
   void printNumber(void);
@@ -16,7 +16,8 @@ Complex::Complex(
 void Complex::printNumber() { std::cout << a << ":" << b << std::endl; }
 
 int main() {
-  Complex a1;
-  a1.printNumber();
+  Complex *a1 = new Complex;
+  a1->printNumber();
+  delete a1;
   return EXIT_SUCCESS;
 }

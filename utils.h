@@ -24,9 +24,18 @@
 #include <vector>    // IWYU pragma: export
 #include <windows.h> // IWYU pragma: export
 
-void print_array(int arr[], int size);
+using u64 = uint64_t;
+using u32 = uint32_t;
+using f64 = double;
+using d64i = std::vector<u64>;
+using d64f = std::vector<f64>;
+
+namespace utils {
+void print_array(u64 arr[], u64 size, bool array_format = false);
 void initRandom();
-int randomInt(int max);
-int randomInt(int min, int max);
-float randomFloat(float max);
-float randomFloat(float min, float max);
+u64 randomInt(u64 max);
+u64 randomInt(u64 min, u64 max);
+f64 randomFloat(f64 max);
+f64 randomFloat(f64 min, f64 max);
+std::string random_id_gen(u64 size);
+} // namespace utils

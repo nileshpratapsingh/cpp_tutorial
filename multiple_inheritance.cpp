@@ -2,18 +2,18 @@
 
 class Base1 {
     protected:
-        int u1;
+        u64 u1;
 
     public:
-        void set_data(int a) { u1 = a; }
+        void set_data(u64 a) { u1 = a; }
 };
 
 class Base2 {
     protected:
-        int u2;
+        u64 u2;
 
     public:
-        void set_data(int a) { u2 = a; }
+        void set_data(u64 a) { u2 = a; }
 };
 
 class Derived : public Base1, public Base2 {
@@ -27,9 +27,11 @@ void Derived::display(void) {
 }
 
 int main() {
-    Derived d1;
-    d1.Base1::set_data(34);
-    d1.Base2::set_data(45);
-    d1.display();
+    Derived *d1 = new Derived;
+    // Manually resolving Ambiguity.
+    d1->Base1::set_data(34);
+    d1->Base2::set_data(45);
+    d1->display();
+    delete d1;
     return EXIT_SUCCESS;
 }

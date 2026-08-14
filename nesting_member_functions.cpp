@@ -44,11 +44,11 @@ void binary::display() {
 }
 
 int main(int argc, char *argv[]) {
-  binary b;
-  b.read();
-  b.display();
-  b.ones_compliment();
+  binary *ptr = new binary;
+  ptr->read();
+  ptr->display();
+  ptr->ones_compliment();
   std::cout << "\n";
-  b.display();
+  ptr->display();
   return EXIT_SUCCESS;
 }

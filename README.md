@@ -131,7 +131,7 @@ All executables are placed inside the `build` folder.
 ### Source Files
 
 ```make
-SRCS := $(wildcard *.cpp)
+SRCS := $(wildcard src/*.cpp)
 ```
 
 Automatically finds every `.cpp` file in the src(source) directory.

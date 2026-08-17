@@ -29,11 +29,7 @@ pacman -S make
 ```
 .
 ├── Makefile
-├── utils.h
-├── utils.cpp
-├── program1.cpp
-├── program2.cpp
-├── program3.cpp
+├── src/
 └── build/
 ```
 
@@ -138,7 +134,7 @@ All executables are placed inside the `build` folder.
 SRCS := $(wildcard *.cpp)
 ```
 
-Automatically finds every `.cpp` file in the current directory.
+Automatically finds every `.cpp` file in the src(source) directory.
 
 Example:
 

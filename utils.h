@@ -24,9 +24,11 @@
 #include <vector>    // IWYU pragma: export
 #include <windows.h> // IWYU pragma: export
 
+using s64 = int64_t;
 using u64 = uint64_t;
 using u32 = uint32_t;
 using f64 = double;
+using uld = long double;
 using d64i = std::vector<u64>;
 using d64f = std::vector<f64>;
 

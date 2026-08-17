@@ -6,7 +6,7 @@ BUILD_DIR := build
 ASM_DIR := asm
 
 # All .cpp files
-SRCS := $(wildcard *.cpp)
+SRCS := $(wildcard src/ *.cpp)
 
 # Shared source files (not executables)
 COMMON_SRCS := utils.cpp
